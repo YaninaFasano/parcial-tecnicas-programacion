@@ -12,7 +12,15 @@ def puntajeEquipos(lista):
             lista.append([tupla[2], 0])
     return tabla
 
-def sumarPuntaje()
+def sumarPuntaje(resultados):
+    tabla = {}
+    for lista in resultados:
+        if lista[0] not in tabla:
+            tabla[lista[0]] = lista[1]
+        else:
+            tabla[lista[0]] = tabla[lista[0]] + lista[1]
+    return tabla
+
 
 def ejercicio3(var1):
     return puntajeEquipos(var1)
