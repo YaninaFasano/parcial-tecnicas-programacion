@@ -12,6 +12,7 @@ def puntajeEquipos(lista):
             lista.append([tupla[2], 0])
     return tabla
 
+
 def sumarPuntaje(resultados):
     tabla = {}
     for lista in resultados:
@@ -20,6 +21,18 @@ def sumarPuntaje(resultados):
         else:
             tabla[lista[0]] = tabla[lista[0]] + lista[1]
     return tabla
+
+
+def campeonLiga(diccionario):
+    maximoPuntaje = max(diccionario.values())
+    for equipo in diccionario:
+        if diccionario[equipo] == maximoPuntaje:
+            return equipo
+
+
+
+
+
 
 
 def ejercicio3(var1):
