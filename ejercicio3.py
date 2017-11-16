@@ -30,13 +30,36 @@ def campeonLiga(diccionario):
             return equipo
 
 
+def chequeaEmpate(diccionario):
+    puntajes = list(diccionario.values())
+    puntaje1 = puntajes[0]
+    for puntaje in puntajes[:1]:
+        if puntaje == puntaje1:
+            resultado = False
+        else:
+            resultado = True
+    return resultado
 
+
+def elegirCampeon(diccionario):
+    equipos = sorted(list(diccionario.keys()))
+    return equipos[0]
+
+
+def funcionPrincipalLiga(lista):
+    if len(lista) < 1:
+        return ""
+    listaDeTuplas = puntajeEquipos(lista)
+    diccionario = ordenaTabla(listaDeTuplas)
+    if chequeaEmpate(diccionario) == False:
+        return elegirCampeon(diccionario)
+    return campeonLiga(diccionario)
 
 
 
 
 def ejercicio3(var1):
-    return puntajeEquipos(var1)
+    return funcionPrincipalLiga(var1)
 
 
 assert (ejercicio3([]) == "")
