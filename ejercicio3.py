@@ -23,7 +23,7 @@ def sumarPuntaje(resultados):
     return tabla
 
 
-def campeonLiga(diccionario):
+def elegirCampeonLiga(diccionario):
     maximoPuntaje = max(diccionario.values())
     for equipo in diccionario:
         if diccionario[equipo] == maximoPuntaje:
@@ -35,13 +35,13 @@ def chequeaEmpate(diccionario):
     puntaje1 = puntajes[0]
     for puntaje in puntajes[:1]:
         if puntaje == puntaje1:
-            resultado = False
+            puntaje1 = False
         else:
-            resultado = True
-    return resultado
+            puntaje1 = True
+    return puntajes
 
 
-def elegirCampeon(diccionario):
+def OrdenarDiccionario(diccionario):
     equipos = sorted(list(diccionario.keys()))
     return equipos[0]
 
@@ -52,8 +52,8 @@ def funcionPrincipalLiga(lista):
     listaDeTuplas = puntajeEquipos(lista)
     diccionario = sumarPuntaje(listaDeTuplas)
     if chequeaEmpate(diccionario) == False:
-        return elegirCampeon(diccionario)
-    return campeonLiga(diccionario)
+        return OrdenarDiccionario(diccionario)
+    return elegirCampeonLiga(diccionario)
 
 
 
@@ -64,8 +64,8 @@ def ejercicio3(var1):
 
 
 
-#assert (ejercicio3([]) == "")
-#assert (ejercicio3([("a", 1, "b", 0)]) == "a")
-#assert (ejercicio3([("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]) == "c")
-#assert (ejercicio3([("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]) == "Almagro")
-#assert (ejercicio3([("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]) == "a")
+assert (ejercicio3([]) == "")
+assert (ejercicio3([("a", 1, "b", 0)]) == "a")
+assert (ejercicio3([("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]) == "c")
+assert (ejercicio3([("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]) == "Almagro")
+assert (ejercicio3([("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]) == "a")
