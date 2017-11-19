@@ -9,6 +9,8 @@ def condiciones(cadena):
     if lista not in verificacion or len(cadena) < 1:
         return False
 
+
+
 def rotarPalabra(palabra):
     if condiciones(palabra) == False:
         return []

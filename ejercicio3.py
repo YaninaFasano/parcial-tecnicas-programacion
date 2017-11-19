@@ -13,6 +13,7 @@ def puntajeEquipos(lista):
     return tabla
 
 
+
 def sumarPuntaje(resultados):
     tabla = {}
     for lista in resultados:
@@ -23,6 +24,7 @@ def sumarPuntaje(resultados):
     return tabla
 
 
+
 def elegirCampeonLiga(diccionario):
     maximoPuntaje = max(diccionario.values())
     for equipo in diccionario:
@@ -30,7 +32,8 @@ def elegirCampeonLiga(diccionario):
             return equipo
 
 
-def chequeaEmpate(diccionario):
+
+def chequearEmpate(diccionario):
     puntajes = list(diccionario.values())
     puntaje1 = puntajes[0]
     for puntaje in puntajes[:1]:
@@ -41,9 +44,11 @@ def chequeaEmpate(diccionario):
     return puntajes
 
 
+
 def OrdenarDiccionario(diccionario):
     equipos = sorted(list(diccionario.keys()))
     return equipos[0]
+
 
 
 def funcionPrincipalLiga(lista):
@@ -51,7 +56,7 @@ def funcionPrincipalLiga(lista):
         return ""
     listaDeTuplas = puntajeEquipos(lista)
     diccionario = sumarPuntaje(listaDeTuplas)
-    if chequeaEmpate(diccionario) == False:
+    if chequearEmpate(diccionario) == False:
         return OrdenarDiccionario(diccionario)
     return elegirCampeonLiga(diccionario)
 
@@ -60,9 +65,6 @@ def funcionPrincipalLiga(lista):
 
 def ejercicio3(var1):
     return funcionPrincipalLiga(var1)
-
-
-
 
 assert (ejercicio3([]) == "")
 assert (ejercicio3([("a", 1, "b", 0)]) == "a")
