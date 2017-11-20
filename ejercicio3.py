@@ -36,7 +36,7 @@ def elegirCampeonLiga(diccionario):
 def chequearEmpate(diccionario):
     puntajes = list(diccionario.values())
     puntaje1 = puntajes[0]
-    for puntaje in puntajes[:1]:
+    for puntaje in puntajes[1:]:
         if puntaje == puntaje1:
             resultado = False
         else:
@@ -70,4 +70,4 @@ assert (ejercicio3([]) == "")
 assert (ejercicio3([("a", 1, "b", 0)]) == "a")
 assert (ejercicio3([("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]) == "c")
 assert (ejercicio3([("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]) == "Almagro")
-#assert (ejercicio3([("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]) == "a")
+assert (ejercicio3([("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]) == "a")
