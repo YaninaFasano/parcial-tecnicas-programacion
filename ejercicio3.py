@@ -38,10 +38,10 @@ def chequearEmpate(diccionario):
     puntaje1 = puntajes[0]
     for puntaje in puntajes[:1]:
         if puntaje == puntaje1:
-            puntaje1 = False
+            resultado = False
         else:
-            puntaje1 = True
-    return puntajes
+            resultado = True
+    return resultado
 
 
 
