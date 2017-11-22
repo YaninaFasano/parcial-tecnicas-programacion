@@ -42,13 +42,13 @@ class TestEjercicio2(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaConTresPalabrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaConPalabrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaConTresPalabras = ["soy NO valido"]
+        listaConPalabras = ["soy NO valido"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaConTresPalabras, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaConPalabras, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
@@ -69,5 +69,38 @@ class TestEjercicio2(unittest.TestCase):
 
 
     def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYLetrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+        #ARRANGE
+        listaDeCuatroElementosConVariacionesDePuntosYLetras = ["b.b.","....","..bb","b.b"]
+        posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
+
+        #ACT
+        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConVariacionesDePuntosYLetras, posicionesDeDisparosDePrueba)
+
+        #ASSERT
+        self.assertEqual(resultado,[])
 
 
+
+    def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYletrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeTuplasDeDosElementosConPosicionesResultantes(self):
+        #ARRANGE
+        listaDeCuatroElementosConVariacionesDePuntosYletras = ["b.b..","b...b",".....","....b"]
+        posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
+
+        #ACT
+        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConVariacionesDePuntosYletras, posicionesDeDisparosDePrueba)
+
+        #ASSERT
+        self.assertEqual(resultado,[(2,1),(2,5)])
+
+
+
+    def testRecibirUnaListaDeTresElementosConVariacionesDePuntosYletrasYunaListaVaciaDeberiaDevolverUnaListaDeTuplasDeDosElementosConPosicionesResultantes(self):
+        #ARRANGE
+        listaDeTresElementosConVariacionesDePuntosYletras = ["b..","...","..b"]
+        listaVacia = []
+
+        #ACT
+        resultado = ejercicio2.batallaDeBotesMain(listaDeTresElementosConVariacionesDePuntosYletras, listaVacia)
+
+        #ASSERT
+        self.assertEqual(resultado,[(1,1),(3,3)])

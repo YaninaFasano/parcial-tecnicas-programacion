@@ -63,9 +63,3 @@ def ejercicio2(var1,var2):
     return batallaDeBotesMain(var1,var2)
 
 posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
-
-
-assert (ejercicio2(["b.b.","....","..bb","b.b"],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["b.b..","b...b",".....","....b"],posicionesDeDisparosDePrueba) == [(2,1),(2,5)])
-assert (ejercicio2(["b..","...","..b"],[]) == [(1,1),(3,3)])
-

@@ -27,61 +27,60 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnCaracterDeberiaDevolverUnaListaConUnCaracter(self):
+    def testRecibirUnaPalabraDeUnCaracterDeberiaDevolverUnaListaConElCaracterRecibido(self):
         #ARRANGE
-        caracter = "a"
+        palabraDeUnCaracter = "a"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(caracter)
+        resultado = ejercicio1.rotarPalabra(palabraDeUnCaracter)
 
         #ASSERT
         self.assertEqual(resultado,['a'])
 
 
 
-    def testRecibirDosCaracteresDeberiaDevolverUnaListaDeDosElementosConLaPalabraOriginalYrotada(self):
+    def testRecibirUnaPalabraDeDosCaracteresDeberiaDevolverUnaListaDeDosElementosConLaPalabraRecibidaYrotada(self):
         #ARRANGE
-        dosCaracteres = "ab"
+        palabraDeDosCaracteres = "ab"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(dosCaracteres)
+        resultado = ejercicio1.rotarPalabra(palabraDeDosCaracteres)
 
         #ASSERT
         self.assertEqual(resultado,['ab','ba'])
 
 
 
-    def testRecibirTresCaracteresDeberiaDevolverUnaListaDeTresElementosConLaPalabraOriginalYrotada(self):
+    def testRecibirUnaPalabraDeTresCaracteresDeberiaDevolverUnaListaDeTresElementosConLaPalabraRecibidaYrotada(self):
         #ARRANGE
-        tresCaracteres = "paz"
+        palabraDeTresCaracteres = "paz"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(tresCaracteres)
+        resultado = ejercicio1.rotarPalabra(palabraDeTresCaracteres)
 
         #ASSERT
         self.assertEqual(resultado,['paz','azp','zpa'])
 
 
 
-    def testRecibirTresCaracteresYunEspacioDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraOriginalYrotada(self):
+    def testRecibirUnaPalabraDeTresCaracteresConUnEspacioIntermedioDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraRecibidaYrotada(self):
         #ARRANGE
-        tresCaracteresYunEspacio = "so l"
+        palabraDeTresCaracteresConUnEspacioIntermedio = "so l"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(tresCaracteresYunEspacio)
+        resultado = ejercicio1.rotarPalabra(palabraDeTresCaracteresConUnEspacioIntermedio)
 
         #ASSERT
         self.assertEqual(resultado,['so l','o ls',' lso','lso '])
 
 
 
-    def testRecibirCincoCaracteresDeberiaDevolverUnaListaDeCincoElementosConLaPalabraOriginalYrotada(self):
+    def testRecibirUnaPalabraDeCincoCaracteresDeberiaDevolverUnaListaDeCincoElementosConLaPalabraRecibidaYrotada(self):
         #ARRANGE
-        cincoCaracteres = "rotar"
+        palabraDeCincoCaracteres = "rotar"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(cincoCaracteres)
+        resultado = ejercicio1.rotarPalabra(palabraDeCincoCaracteres)
 
         #ASSERT
         self.assertEqual(resultado,['rotar','otarr','tarro','arrot','rrota'])
-
