@@ -27,7 +27,7 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeUnCaracterDeberiaDevolverUnaListaConElCaracterRecibido(self):
+    def testRecibirUnaPalabraDeUnCaracterDeberiaDevolverUnaListaConLaPalabraRecibida(self):
         #ARRANGE
         palabraDeUnCaracter = "a"
 

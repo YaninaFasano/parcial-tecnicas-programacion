@@ -81,7 +81,7 @@ class TestEjercicio2(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYletrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeTuplasDeDosElementosConPosicionesResultantes(self):
+    def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYletrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeDosTuplasConPosicionesResultantes(self):
         #ARRANGE
         listaDeCuatroElementosConVariacionesDePuntosYletras = ["b.b..","b...b",".....","....b"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
@@ -94,7 +94,7 @@ class TestEjercicio2(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeTresElementosConVariacionesDePuntosYletrasYunaListaVaciaDeberiaDevolverUnaListaDeTuplasDeDosElementosConPosicionesResultantes(self):
+    def testRecibirUnaListaDeTresElementosConVariacionesDePuntosYletrasYunaListaVaciaDeberiaDevolverUnaListaDeDosTuplasConPosicionesResultantes(self):
         #ARRANGE
         listaDeTresElementosConVariacionesDePuntosYletras = ["b..","...","..b"]
         listaVacia = []

@@ -15,7 +15,7 @@ class TestEjercicio3(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeTuplasConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
+    def testRecibirUnaListaDeUnaTuplaConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
         #ARRANGE
         listaDeTuplasConEquiposYpuntajes = [("a", 1, "b", 0)]
 
@@ -27,7 +27,7 @@ class TestEjercicio3(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeTuplasDeTresElementosConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
+    def testRecibirUnaListaDeTresTuplasConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
         #ARRANGE
         listaDeTuplasDeTresElementosConEquiposYpuntajes = [("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]
 
@@ -39,7 +39,7 @@ class TestEjercicio3(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeTuplasDeTresElementosConEquiposYpuntajesIgualesDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
+    def testRecibirUnaListaDeTresTuplasConEquiposYpuntajesIgualesDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
         #ARRANGE
         listaDeTuplasDeTresElementosConEquiposYpuntajesIguales = [("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]
 
@@ -51,7 +51,7 @@ class TestEjercicio3(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeTuplasDeCuatroElementosConEquiposYpuntajesDeberiaDevolverElEquipoGanador(self):
+    def testRecibirUnaListaDeCuatroTuplasConEquiposYpuntajesDeberiaDevolverElEquipoGanador(self):
         #ARRANGE
         listaDeTuplasDeCuatroElementosConEquiposYpuntajes = [("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]
 
