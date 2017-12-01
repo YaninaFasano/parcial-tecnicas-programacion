@@ -27,7 +27,7 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeUnCaracterDeberiaDevolverUnaListaConLaPalabraRecibida(self):
+    def testRecibirUnaPalabraDeUnCaracterDeberiaDevolverUnaListaDeUnElementoConLaPalabraRecibida(self):
         #ARRANGE
         palabraDeUnCaracter = "a"
 
@@ -63,12 +63,12 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeTresCaracteresConUnEspacioIntermedioDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraRecibidaYrotada(self):
+    def testRecibirUnaPalabraDeCuatroCaracteresDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraRecibidaYrotada(self):
         #ARRANGE
-        palabraDeTresCaracteresConUnEspacioIntermedio = "so l"
+        palabraDeCuatroCaracteres = "so l"
 
         #ACT
-        resultado = ejercicio1.rotarPalabra(palabraDeTresCaracteresConUnEspacioIntermedio)
+        resultado = ejercicio1.rotarPalabra(palabraDeCuatroCaracteres)
 
         #ASSERT
         self.assertEqual(resultado,['so l','o ls',' lso','lso '])

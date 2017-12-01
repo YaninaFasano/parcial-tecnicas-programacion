@@ -15,48 +15,48 @@ class TestEjercicio3(unittest.TestCase):
 
 
 
-    def testRecibirUnaListaDeUnaTuplaConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
+    def testRecibirUnaListaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoConMayorPuntaje(self):
         #ARRANGE
-        listaDeTuplasConEquiposYpuntajes = [("a", 1, "b", 0)]
+        listaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo = [("a", 1, "b", 0)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTuplasConEquiposYpuntajes)
+        resultado = ejercicio3.funcionPrincipalLiga(listaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo)
 
         #ASSERT
         self.assertEqual(resultado,"a")
 
 
 
-    def testRecibirUnaListaDeTresTuplasConEquiposYpuntajesDeberiaDevolverElEquipoConMayorPuntaje(self):
+    def testRecibirUnaListaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoConMayorPuntajeAlSumarseLosPuntajesDeLosElementosCorrespondientesApuntajesDeLasTresTuplas(self):
         #ARRANGE
-        listaDeTuplasDeTresElementosConEquiposYpuntajes = [("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]
+        listaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo = [("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTuplasDeTresElementosConEquiposYpuntajes)
+        resultado = ejercicio3.funcionPrincipalLiga(listaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo)
 
         #ASSERT
         self.assertEqual(resultado,"c")
 
 
 
-    def testRecibirUnaListaDeTresTuplasConEquiposYpuntajesIgualesDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
+    def testRecibirUnaListaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquiposDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
         #ARRANGE
-        listaDeTuplasDeTresElementosConEquiposYpuntajesIguales = [("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]
+        listaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquipos = [("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTuplasDeTresElementosConEquiposYpuntajesIguales)
+        resultado = ejercicio3.funcionPrincipalLiga(listaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquipos)
 
         #ASSERT
         self.assertEqual(resultado,"Almagro")
 
 
 
-    def testRecibirUnaListaDeCuatroTuplasConEquiposYpuntajesDeberiaDevolverElEquipoGanador(self):
+    def testRecibirUnaListaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoGanadorAlSumarseLosPuntajesDeLosElementosCorrespondientesAPuntajesDeLasCuatroTuplas(self):
         #ARRANGE
-        listaDeTuplasDeCuatroElementosConEquiposYpuntajes = [("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]
+        listaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipo = [("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTuplasDeCuatroElementosConEquiposYpuntajes)
+        resultado = ejercicio3.funcionPrincipalLiga(listaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipo)
 
         #ASSERT
         self.assertEqual(resultado,"a")

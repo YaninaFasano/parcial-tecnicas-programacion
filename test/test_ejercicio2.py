@@ -3,104 +3,104 @@ import unittest
 
 class TestEjercicio2(unittest.TestCase):
 
-    def testRecibirUnaListaVaciaYPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaVaciaYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
         listaVacia = []
-        PosicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
+        posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaVacia, PosicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaVacia, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
 
 
 
-    def testRecibirUnaListaConUnaPalabraVaciaYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaDeUnElementoConUnaPalabraVaciaYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaConUnaPalabraVacia = [""]
+        listaDeUnElementoConUnaPalabraVacia = [""]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaConUnaPalabraVacia, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConUnaPalabraVacia, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado, [])
 
 
 
-    def testRecibirUnaListaConCadenaDeCaracteresDeEspaciosYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaDeUnElementoConCadenaDeCaracteresDeEspaciosYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaConCadenaDeCaracteresDeEspacios = ["      "]
+        listaDeUnElementoConCadenaDeCaracteresDeEspacios = ["      "]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaConCadenaDeCaracteresDeEspacios, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConCadenaDeCaracteresDeEspacios, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
 
 
 
-    def testRecibirUnaListaConPalabrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaDeUnElementoConPalabrasYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaConPalabras = ["soy NO valido"]
+        listaDeUnElementoConPalabras = ["soy NO valido"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaConPalabras, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConPalabras, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConPalabrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaDeCuatroElementosConUnaPalabraPorElementoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeCuatroElementosConPalabras = ["yo","tambien","soy","invalido"]
+        listaDeCuatroElementosConUnaPalabraPorElemento = ["yo","tambien","soy","invalido"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConPalabras, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConUnaPalabraPorElemento, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYLetrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnaListaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeCuatroElementosConVariacionesDePuntosYLetras = ["b.b.","....","..bb","b.b"]
+        listaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego = ["b.b.","....","..bb","b.b"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConVariacionesDePuntosYLetras, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConVariacionesDePuntosYletrasYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeDosTuplasConPosicionesResultantes(self):
+    def testRecibirUnaListaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeDosTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeBotesQueNoFueronHundidos(self):
         #ARRANGE
-        listaDeCuatroElementosConVariacionesDePuntosYletras = ["b.b..","b...b",".....","....b"]
+        listaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaReprsentandolosBotesFormandoConjuntamenteElMapaDelJuego = ["b.b..","b...b",".....","....b"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConVariacionesDePuntosYletras, posicionesDeDisparosDePrueba)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaReprsentandolosBotesFormandoConjuntamenteElMapaDelJuego, posicionesDeDisparosDePrueba)
 
         #ASSERT
         self.assertEqual(resultado,[(2,1),(2,5)])
 
 
 
-    def testRecibirUnaListaDeTresElementosConVariacionesDePuntosYletrasYunaListaVaciaDeberiaDevolverUnaListaDeDosTuplasConPosicionesResultantes(self):
+    def testRecibirUnaListaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaVaciaDeberiaDevolverUnaListaDeDosTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeBotesQueNoFueronHundidos(self):
         #ARRANGE
-        listaDeTresElementosConVariacionesDePuntosYletras = ["b..","...","..b"]
+        listaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego = ["b..","...","..b"]
         listaVacia = []
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeTresElementosConVariacionesDePuntosYletras, listaVacia)
+        resultado = ejercicio2.batallaDeBotesMain(listaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego, listaVacia)
 
         #ASSERT
         self.assertEqual(resultado,[(1,1),(3,3)])
