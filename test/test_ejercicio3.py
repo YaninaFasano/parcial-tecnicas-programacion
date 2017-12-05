@@ -3,60 +3,60 @@ import unittest
 
 class TestEjercicio3(unittest.TestCase):
 
-    def testRecibirUnaListaVaciaDeberiaDevolverUnaPalabraVacia(self):
+    def testRecibirValoresVaciosDeberiaDevolverUnaPalabraVacia(self):
         #ARRANGE
-        listaVacia = []
+        valoresVacios = []
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaVacia)
+        resultado = ejercicio3.calcularCampeonDeLaLiga(valoresVacios)
 
         #ASSERT
         self.assertEqual(resultado,"")
 
 
 
-    def testRecibirUnaListaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoConMayorPuntaje(self):
+    def testRecibirLetrasRepresentandoEquiposYNumerosRepresentandoPuntajesParaCadaEquipoDeberiaDevolverElEquipoConMayorPuntaje(self):
         #ARRANGE
-        listaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo = [("a", 1, "b", 0)]
+        letrasRepresentandoEquiposYNumerosRepresentandoPuntajesParaCadaEquipo = [("a", 1, "b", 0)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeUnaTuplaDeCuatroElementosConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo)
+        equipoConMayorPuntaje = ejercicio3.calcularCampeonDeLaLiga(letrasRepresentandoEquiposYNumerosRepresentandoPuntajesParaCadaEquipo)
 
         #ASSERT
-        self.assertEqual(resultado,"a")
+        self.assertEqual(equipoConMayorPuntaje,"a")
 
 
 
-    def testRecibirUnaListaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoConMayorPuntajeAlSumarseLosPuntajesDeLosElementosCorrespondientesApuntajesDeLasTresTuplas(self):
+    def testRecibirPuntajesDeLosEquiposEnDiferentesPartidosDeberiaDevolverElEquipoConMayorPuntajePromedio(self):
         #ARRANGE
-        listaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo = [("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]
+        puntajesDeLosEquiposEnDiferentesPartidos = [("a", 1, "b", 0), ("a", 1, "c", 2), ("c", 3, "b", 0)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTresTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesCorrespondientesParaCadaEquipo)
+        equipoConMayorPuntajePromedio = ejercicio3.calcularCampeonDeLaLiga(puntajesDeLosEquiposEnDiferentesPartidos)
 
         #ASSERT
-        self.assertEqual(resultado,"c")
+        self.assertEqual(equipoConMayorPuntajePromedio,"c")
 
 
 
-    def testRecibirUnaListaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquiposDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
+    def testRecibirPuntajesEmpatadosDeLosEquiposEnDiferentesPartidosDeberiaDevolverElEquipoEnElPrimerOrdenDelAlfabeto(self):
         #ARRANGE
-        listaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquipos = [("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]
+        puntajesEmpatadosDeLosEquiposEnDiferentesPartidos = [("Boca", 1, "Belgrano", 1), ("Boca", 1, "Almagro", 1), ("Almagro", 1, "Belgrano", 1)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeTresTuplasDeCuatroElementosCadaUnaConNombresDeLosEquiposYPuntajesIgualesAunoParaTodosLosEquipos)
+        equipoEnElPrimerOrdenDelAlfabeto = ejercicio3.calcularCampeonDeLaLiga(puntajesEmpatadosDeLosEquiposEnDiferentesPartidos)
 
         #ASSERT
-        self.assertEqual(resultado,"Almagro")
+        self.assertEqual(equipoEnElPrimerOrdenDelAlfabeto,"Almagro")
 
 
 
-    def testRecibirUnaListaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipoDeberiaDevolverElEquipoGanadorAlSumarseLosPuntajesDeLosElementosCorrespondientesAPuntajesDeLasCuatroTuplas(self):
+    def testRecibirPuntajesTotalesDeEquiposEnDiferentesPartidosDeberiaDevolverElEquipoGanador(self):
         #ARRANGE
-        listaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipo = [("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]
+        puntajesTotalesDeEquiposEnDiferentesPartidos= [("a", 1, "b", -2), ("a", 1, "c", 1), ("c", 1, "b", 1), ("d", 1, "a", 9)]
 
         #ACT
-        resultado = ejercicio3.funcionPrincipalLiga(listaDeCuatroTuplasDeCuatroElementosCadaUnaConLetrasRepresentandoAlosEquiposYnumerosRepresentandoLosPuntajesFinalesCorrespondientesParaCadaEquipo)
+        equipoGanador = ejercicio3.calcularCampeonDeLaLiga(puntajesTotalesDeEquiposEnDiferentesPartidos)
 
         #ASSERT
-        self.assertEqual(resultado,"a")
+        self.assertEqual(equipoGanador,"a")

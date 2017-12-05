@@ -25,7 +25,9 @@ def revisaValidezDelMapa(mapa):
 
 
 def encuentraBotes(mapa):
+
     botes = []
+
     for fila in mapa:
         if 'b' in fila:
             coordenada = 0
@@ -37,29 +39,28 @@ def encuentraBotes(mapa):
                     coordenada = coordenada + 1
                     continue
                 botes.append(bote)
+
     return botes
 
 
 
 def eliminaBotes(botes, disparos):
+
     for disparo in disparos:
+
         if disparo in botes:
             botes.remove(disparo)
+
     return botes
 
 
 
-def batallaDeBotesMain(mapa, disparos):
+def calcularPosicionesBarcosSobrevivientes(mapa, disparos):
+
     if revisaValidezDelMapa(mapa) == []:
         return []
+
     botesEnElMapa = encuentraBotes(mapa)
     sobrevivientes = eliminaBotes(botesEnElMapa, disparos)
+
     return sobrevivientes
-
-
-
-
-def ejercicio2(var1,var2):
-    return batallaDeBotesMain(var1,var2)
-
-posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]

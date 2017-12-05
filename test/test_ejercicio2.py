@@ -3,104 +3,104 @@ import unittest
 
 class TestEjercicio2(unittest.TestCase):
 
-    def testRecibirUnaListaVaciaYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaVacioYPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaVacia = []
+        mapaVacio = []
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaVacia, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaVacio, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[])
+        self.assertEqual(posiciones,[])
 
 
 
-    def testRecibirUnaListaDeUnElementoConUnaPalabraVaciaYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaConUnaPalabraVaciaYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeUnElementoConUnaPalabraVacia = [""]
+        mapaConUnaPalabraVacia = [""]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConUnaPalabraVacia, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaConUnaPalabraVacia, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado, [])
+        self.assertEqual(posiciones, [])
 
 
 
-    def testRecibirUnaListaDeUnElementoConCadenaDeCaracteresDeEspaciosYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaConCadenaDeCaracteresDeEspaciosYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeUnElementoConCadenaDeCaracteresDeEspacios = ["      "]
+        mapaConCadenaDeCaracteresDeEspacios = ["      "]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConCadenaDeCaracteresDeEspacios, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaConCadenaDeCaracteresDeEspacios, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[])
+        self.assertEqual(posiciones,[])
 
 
 
-    def testRecibirUnaListaDeUnElementoConPalabrasYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaNoValidoYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeUnElementoConPalabras = ["soy NO valido"]
+        mapaNoValido = ["soy NO valido"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeUnElementoConPalabras, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaNoValido, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[])
+        self.assertEqual(posiciones,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConUnaPalabraPorElementoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaNoValidoYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeCuatroElementosConUnaPalabraPorElemento = ["yo","tambien","soy","invalido"]
+        mapaNoValido = ["yo","tambien","soy","invalido"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConUnaPalabraPorElemento, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaNoValido, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[])
+        self.assertEqual(posiciones,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
+    def testRecibirUnMapaConFilasDeDistintasCantidadDeElementosYposicionesDeDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
         #ARRANGE
-        listaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego = ["b.b.","....","..bb","b.b"]
+        mapaConFilasDeDistintasCantidadDeElementos = ["b.b.","....","..bb","b.b"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConCuatroCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaConFilasDeDistintasCantidadDeElementos, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[])
+        self.assertEqual(posiciones,[])
 
 
 
-    def testRecibirUnaListaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaDeCuatroTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeDisparosDePruebaDeberiaDevolverUnaListaDeDosTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeBotesQueNoFueronHundidos(self):
+    def testRecibirUnMapaDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesYposicionesDeDisparosDePruebaDeberiaDevolverLasPosicionesDeBotesQueNoFueronHundidos(self):
         #ARRANGE
-        listaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaReprsentandolosBotesFormandoConjuntamenteElMapaDelJuego = ["b.b..","b...b",".....","....b"]
+        mapaConPuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotes= ["b.b..","b...b",".....","....b"]
         posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeCuatroElementosConCincoCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaReprsentandolosBotesFormandoConjuntamenteElMapaDelJuego, posicionesDeDisparosDePrueba)
+        posiciones = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaConPuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotes, posicionesDeDisparosDePrueba)
 
         #ASSERT
-        self.assertEqual(resultado,[(2,1),(2,5)])
+        self.assertEqual(posiciones,[(2,1),(2,5)])
 
 
 
-    def testRecibirUnaListaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuegoYunaListaVaciaDeberiaDevolverUnaListaDeDosTuplasDeDosElementosCadaUnaConNumerosRepresentandoLasPosicionesDeBotesQueNoFueronHundidos(self):
+    def testRecibirUnMapaConPuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesYunMapaVacioDeberiaDevolverlasPosicionesDeBotesQueNoFueronHundidos(self):
         #ARRANGE
-        listaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego = ["b..","...","..b"]
-        listaVacia = []
+        mapaConPuntosRepresentandoElAguaYletrasBeLargaRepresentandoLosBotes= ["b..","...","..b"]
+        mapaVacio = []
 
         #ACT
-        resultado = ejercicio2.batallaDeBotesMain(listaDeTresElementosConTresCaracteresPorElementoConVariacionesDePuntosRepresentandoElAguaYdeLetrasBeLargaRepresentandoLosBotesFormandoConjuntamenteElMapaDelJuego, listaVacia)
+        resultado = ejercicio2.calcularPosicionesBarcosSobrevivientes(mapaConPuntosRepresentandoElAguaYletrasBeLargaRepresentandoLosBotes, mapaVacio)
 
         #ASSERT
         self.assertEqual(resultado,[(1,1),(3,3)])

@@ -23,11 +23,3 @@ def rotarPalabra(palabra):
         ultimaLetra = ultimaLetra - 1
     lista = lista[::-1]
     return lista
-
-
-
-
-def ejercicio1(var1):
-    return rotarPalabra(var1)
-
-

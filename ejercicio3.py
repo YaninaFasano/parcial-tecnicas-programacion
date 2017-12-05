@@ -51,7 +51,7 @@ def OrdenarDiccionario(diccionario):
 
 
 
-def funcionPrincipalLiga(lista):
+def calcularCampeonDeLaLiga(lista):
     if len(lista) < 1:
         return ""
     listaDeTuplas = puntajeEquipos(lista)
@@ -59,9 +59,3 @@ def funcionPrincipalLiga(lista):
     if chequearEmpate(diccionario) == False:
         return OrdenarDiccionario(diccionario)
     return elegirCampeonLiga(diccionario)
-
-
-
-
-def ejercicio3(var1):
-    return funcionPrincipalLiga(var1)

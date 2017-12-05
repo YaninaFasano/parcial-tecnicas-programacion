@@ -51,7 +51,7 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeTresCaracteresDeberiaDevolverUnaListaDeTresElementosConLaPalabraRecibidaYrotada(self):
+    def testRecibirUnaPalabraDeTresCaracteresDeberiaDevolverUnaListaDeTresElementosConLaPalabraRecibidaYDosRotadas(self):
         #ARRANGE
         palabraDeTresCaracteres = "paz"
 
@@ -63,7 +63,7 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeCuatroCaracteresDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraRecibidaYrotada(self):
+    def testRecibirUnaPalabraConUnEspacioEnElMedioDeberiaDevolverUnaListaDeCuatroElementosConLaPalabraRecibidaYSusRotaciones(self):
         #ARRANGE
         palabraDeCuatroCaracteres = "so l"
 
@@ -75,7 +75,7 @@ class TestEjercicio1(unittest.TestCase):
 
 
 
-    def testRecibirUnaPalabraDeCincoCaracteresDeberiaDevolverUnaListaDeCincoElementosConLaPalabraRecibidaYrotada(self):
+    def testRecibirUnaPalabraDeCincoCaracteresDeberiaDevolverUnaListaDeCincoElementosConLaPalabraRecibidaY4Rotaciones(self):
         #ARRANGE
         palabraDeCincoCaracteres = "rotar"
 
